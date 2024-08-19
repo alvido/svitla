@@ -1,7 +1,20 @@
-@import './reset';
-@import './fonts';
-@import './veriables';
-@import './mixins';
-@import './general';
-@import './blocks/header';
-@import './blocks/footer';
+@import 'normalize', 'fonts', 'veriables', 'mixins', 'media', 'utils', 'globals', 'animations';
+
+@import 'blocks/button',
+'blocks/button-burger',
+'blocks/form',
+'blocks/select',
+'blocks/swiper',
+
+'blocks/header',
+'blocks/logo',
+'blocks/navigation',
+'blocks/hero',
+'blocks/about',
+'blocks/beautiful',
+'blocks/needed',
+'blocks/banner',
+
+
+
+'blocks/footer';

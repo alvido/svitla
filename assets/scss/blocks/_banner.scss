@@ -1,0 +1,35 @@
+.banner {
+    position: relative;
+    padding-block: clamp(3.125rem, 2.102rem + 4.55vw, 5.625rem);
+    background: url(/assets/images/bg.jpg) no-repeat center;
+    background-size: cover;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            radial-gradient(10.01% 103.01% at 52.5% 103.01%, rgba(12, 2, 24, 0.2) 0%, rgba(12, 2, 24, 0.2) 100%);
+    }
+
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+
+        & .subtitle {
+            text-align: center;
+        }
+
+        & h2 {
+            text-align: center;
+            color: var(--color-yellow);
+        }
+    }
+
+}

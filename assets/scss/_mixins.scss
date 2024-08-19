@@ -1,48 +1,44 @@
-@mixin font($font-size, $line-height, $font-weight:400, $font-style: normal) {
-    font-size: $font-size;
-    line-height: $line-height;
-    font-weight: $font-weight;
-    font-style: $font-style;
+@mixin fluid-text($max: 48, $min: 16) {
+    font-size: clamp(#{$min}px, #{$max / $container * 100}vw, #{$max}px);
 }
 
-@mixin flex($flex: flex, $align: center, $content: center){
-    display: $flex;
-    align-items: $align;
-    justify-content: $content;
-}
+@mixin reset-link {
+    color: inherit;
 
-@mixin desktop{
-    @media (max-width: $desktop-width) {
-        @content;
+    &,
+    &:hover {
+        text-decoration: none;
     }
 }
 
-@mixin laptop{
-    @media (max-width: $laptop-width) {
-        @content;
-    }
+@mixin reset-button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-@mixin ipad{
-    @media (max-width: $ipad-width) {
-        @content;
+@mixin flex-center($isInline: false) {
+    @if $isInline {
+        display: inline-flex;
     }
+
+    @else {
+        display: flex;
+    }
+
+    justify-content: center;
+    align-items: center;
 }
 
-@mixin tablet{
-    @media (max-width: $tablet-width) {
-        @content;
-    }
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
 }
 
-@mixin mobile{
-    @media (max-width: $mobile-width) {
-        @content;
-    }
-}
-
-@mixin phone{
-    @media (max-width: $phone-width) {
-        @content;
-    }
+@mixin squere($size) {
+    width: $size;
+    aspect-ratio: 1;
 }

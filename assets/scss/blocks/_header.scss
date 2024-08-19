@@ -1,127 +1,34 @@
 .header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
+    position: relative;
+    margin-top: 50px;
     z-index: 2;
 
     &.fixed {
+        margin: 0;
+        padding: 10px 0;
         position: fixed;
-        background-color: $dark;
-
-        & .header__wrapper {
-            padding: 25px 0;
-        }
-
-        & .navigation__item {
-            padding: 10px;
-        }
-
-        & .navigation__link {
-
-            &::before {
-                height: 22px;
-            }
-
-            &::after {
-                bottom: calc(100% + 22px);
-            }
-        }
-    }
-
-    &__wrapper {
-        display: flex;
-        align-items: center;
-        padding: 40px 0;
-
-        @include laptop {
-            padding: 25px 0;
-        }
-
-        @include phone {
-            padding: 20px 0;
-        }
-    }
-
-    &__logo {
-        transition: all .3s ease;
-
-        &:hover {
-            scale: 1.05;
-        }
-
-        & img {
-            width: 147px;
-            height: auto;
-
-            @include mobile {
-                width: 118px;
-            }
-
-            @include phone {
-                width: 89px;
-            }
-        }
-    }
-
-    &__burger {
-        width: 18px;
-        height: 18px;
-        margin-left: 18px;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        background: transparent;
-        position: relative;
-        cursor: pointer;
+        left: 0;
+        right: 0;
+        top: 0;
         z-index: 2;
+        background: var(--color-black);
 
-        @include laptop {
-            display: flex;
+        & .header__link {
+            align-self: center;
         }
+    }
 
-        & span {
-            width: 100%;
-            height: 2px;
-            background-color: $yellow;
-            transition: all .3s ease;
+    &__button {
+        min-width: 215px;
+        height: 40px;
+    }
 
-            &::before,
-            &::after {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 2px;
-                position: absolute;
-                left: 0;
-                background-color: $yellow;
-                transition: all .3s ease;
-            }
-
-            &::before {
-                top: 0;
-            }
-
-            &::after {
-                bottom: 0;
-            }
-        }
-
-        &.active {
-
-            & span {
-                width: 0;
-
-                &::before {
-                    rotate: 45deg;
-                    top: 8px;
-                }
-
-                &::after {
-                    rotate: -45deg;
-                    bottom: 8px;
-                }
-            }
+    &__link {
+        display: flex;
+        align-self: flex-start;
+        @include hover {
+            scale: 1.1;
+            color: var(--color-yellow);
         }
     }
 }

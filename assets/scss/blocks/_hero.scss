@@ -1,3 +1,109 @@
 .hero {
- background: rebeccapurple;
+    min-height: 100vh;
+
+    @include mobile {
+        min-height: auto;
+    }
+
+    @include tablet {
+        margin-top: 50px;
+    }
+
+    &__inner {
+        position: relative;
+        min-height: 750px;
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+            min-height: auto;
+
+            & h1, & .subtitle {
+                text-align: center;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 620px;
+        width: 50%;
+
+        @include tablet {
+            width: 100%;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: flex-end;
+        width: 70%;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            display: block;
+            width: 730px;
+            height: 830px;
+            background: radial-gradient(circle, rgba(119, 92, 19, 1) 0%, rgba(119, 92, 19, 0) 75%);
+
+            @include tablet {
+                left: 50%;
+                right: auto;
+                translate: -50% 0;
+                height: 100%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        @include tablet {
+            position: inherit;
+            width: 100%;
+            justify-content: center;
+
+            & img {
+                max-height: 570px;
+            }
+        }
+    }
+
+    &__marquee {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        overflow: hidden;
+        background: var(--color-yellow);
+        white-space: nowrap;
+        box-sizing: border-box;
+
+        &-list {
+            display: flex;
+            align-items: center;
+            padding-block: clamp(0.313rem, 0.185rem + 0.57vw, 0.625rem);
+            gap: clamp(0rem, -0.384rem + 1.7vw, 0.938rem);
+            animation: marquee 10s linear infinite;
+
+            & li {
+                width: 230px;
+
+                @include mobile {
+                    width: 115px;
+                }
+            }
+        }
+    }
 }

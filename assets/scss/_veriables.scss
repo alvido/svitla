@@ -1,14 +1,47 @@
-$dark: #0F0E13;
-$white: #FFF;
-$yellow: #F8CC58;
-$red: #F66350;
+//
+$container: 1240;
 
-$transparent: transparent;
+:root {
 
+    /*colors*/
+    --color-black: #0C0218;
+    --color-yellow: #F5D76A;
 
-$desktop-width: 1150px;
-$laptop-width: 1000px;
-$ipad-width: 800px;
-$tablet-width: 768px;
-$mobile-width: 560px;
-$phone-width: 430px;
+    --color-blue: #3e5680;
+    --color-light-blue: #b5d5ec;
+
+    --color-gray: #e0e3e6;
+    --color-white: #ffffff;
+
+    --color-gradient: linear-gradient(180deg, #F0F3BD 4.29%, #F9C435 73.63%);
+    --color-gradient-alt: linear-gradient(180deg, #F9C435 4.29%, #F0F3BD 73.63%);
+
+    --color-transparent: transparent;
+    --color-shadow: rgba(22, 28, 45, 0.05);
+    /*colors*/
+
+    /*border*/
+    --border: 2px solid var(--color-blue);
+    
+    --border-radius: 15px;
+    --border-radius-small: 5px;
+    --border-radius-large: 30px;
+    /*border*/
+
+    /*body*/
+    --font-family-base: "Roboto", sans-serif;
+
+    --container-width: #{$container}px;
+    --container-padding-x: 20px;
+
+    --section-padding-y: 80px;
+    /*body*/
+
+    /*button*/
+    --input-height: 55px;
+    --button-height: 70px;
+    --icon-button-height: 30px;
+
+    --transition-duration: 0.3s;
+    /*button*/
+}
