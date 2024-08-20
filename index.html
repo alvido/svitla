@@ -18,6 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -226,38 +227,135 @@
         <section class="about" id="about">
             <div class="container">
                 <h2><span>6 ВЕЛИКИХ</span> ОСНОВНИХ І <span>7 МАЛЕНЬКИХ</span> ДОДАТКОВИХ ЗАВДАНЬ </h2>
+                <div class="wrapper">
+                    <div class="about__course">
+                        <h3>Про курс</h3>
+                        <img src="assets/images/svitla2.png" alt="">
+                        <p><span>2,5</span>Місяці</p>
+                    </div>
+                    <ul class="about__list">
+                        <li class="about__item">
+                            <span>Практики і ритуали</span>, які ви зможете зберегти собі і використовувати на протязі
+                            життя.
+                        </li>
+                        <li class="about__item">
+                            <span>Моя підтримка 24/7</span> зі зворотним звязком
+                        </li>
+                        <li class="about__item">
+                            <span>Індивідуальні созвони</span> з учасницями, 1 раз на тиждень обов’язково і по
+                            необхідності або по запиту
+                        </li>
+                        <li class="about__item">
+                            Підтримка і мотивація від дівчат в <span>груповому чаті</span>
+                        </li>
+                        <li class="about__item">
+                            Знайомство з <span>медитаціями</span>
+                        </li>
+                        <li class="about__item">
+                            <span>Афірмації</span> на кожен день
+                        </li>
+
+                        <li class="about__item">
+                            Персональні рекомендації по <span>харчуванню</span> + консультація і підбір домашнього
+                            <span>косметичного догляду</span>
+                        </li>
+                        <li class="about__item">
+                            <span>Подарунки</span> в кінці курсу
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </section>
         <section class="purpose" id="purpose">
             <div class="container">
                 <h2>Завдяки курсу ти:</h2>
-                <ul class="purpose__list">
-                    <li class="purpose__item">
-                        Чітко усвідомиш куди тобі рухатися
-                    </li>
-                    <li class="purpose__item">
-                        Очистиш простір навколо себе, позбавишся всього старого і не потрібного, що несе в собі порожню
-                        енергію, та забирає твою енергію
-                    </li>
-                    <li class="purpose__item">
-                        Пропрацюєш і відпустиш старі образи, невдачі та розчарування. Пропрацюєш та пробачиш себе і
-                        батьків
-                    </li>
-                    <li class="purpose__item">
-                        Проведеш великий аналіз свого життя
-                    </li>
-                    <li class="purpose__item">
-                        Навчишся медитувати, слухати та чути себе, навчишся давати собі правильні позитивні установки
-                    </li>
-                    <li class="purpose__item">
-                        Піднімеш свою самооцінку та впевненість у собі
-                    </li>
-                </ul>
+                <div class="wrapper">
+                    <ul class="purpose__list">
+                        <li class="purpose__item">
+                            Чітко усвідомиш куди тобі рухатися
+                        </li>
+                        <li class="purpose__item">
+                            Очистиш простір навколо себе, позбавишся всього старого і не потрібного, що несе в собі
+                            порожню
+                            енергію, та забирає твою енергію
+                        </li>
+                        <li class="purpose__item">
+                            Пропрацюєш і відпустиш старі образи, невдачі та розчарування. Пропрацюєш та пробачиш себе і
+                            батьків
+                        </li>
+                        <li class="purpose__item">
+                            Проведеш великий аналіз свого життя
+                        </li>
+                        <li class="purpose__item">
+                            Навчишся медитувати, слухати та чути себе, навчишся давати собі правильні позитивні
+                            установки
+                        </li>
+                        <li class="purpose__item">
+                            Піднімеш свою самооцінку та впевненість у собі
+                        </li>
+                    </ul>
+                    <ul class="purpose__list">
+                        <li class="purpose__item">
+                            Навчишся управляти своїми страхами і сміливо будеш іти в нове.
+                        </li>
+                        <li class="purpose__item">
+                            Дозволиш собі бути ресурсною та задоволеною сама від себе і від свого життя, станеш жінкою,
+                            яка натхнена і закохана в свою природу
+                        </li>
+                        <li class="purpose__item">
+                            Піднімеш свою самооцінку та впевненість у собі
+                        </li>
+                        <li class="purpose__item">
+                            Побачиш сенс життя, свій істинний шлях та отримаєш багато усвідомлень і переосмислень
+                        </li>
+                        <li class="purpose__item">
+                            Повернеш в середині себе баланс чоловічої та жіночої енергій
+                        </li>
+                        <li class="purpose__item">
+                            Почнеш кайфувати від себе нової, світлої та безмежної
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="reviews" id="reviews">
             <div class="container">
                 <h2>Відгуки</h2>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <ul class="swiper-wrapper reviews__list">
+                        <li class="swiper-slide reviews__item">
+                            <img src="assets/images/comments/1.jpg" alt="comments">
+                        </li>
+                        <li class="swiper-slide reviews__item">
+                            <img src="assets/images/comments/2.jpg" alt="comments">
+                        </li>
+                        <li class="swiper-slide reviews__item">
+                            <img src="assets/images/comments/3.jpg" alt="comments">
+                            <img src="assets/images/comments/4.jpg" alt="comments">
+                        </li>
+                        <li class="swiper-slide reviews__item">
+                            <img src="assets/images/comments/5.jpg" alt="comments">
+                        </li>
+                        <li class="swiper-slide reviews__item">
+                            <img src="assets/images/comments/2.jpg" alt="comments">
+                        </li>
+                        <li class="swiper-slide reviews__item">
+                            <img src="assets/images/comments/4.jpg" alt="comments">
+                            <img src="assets/images/comments/3.jpg" alt="comments">
+                        </li>
+                    </ul>
+                    <div class="swiper__navigation">
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper__navigation-button">
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="banner">
@@ -275,6 +373,7 @@
     </footer>
 
     <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 

@@ -1,3 +1,19 @@
 .reviews {
-    margin-top: clamp(3.125rem, 1.207rem + 8.52vw, 7.813rem);
+    margin-block: clamp(3.125rem, 1.207rem + 8.52vw, 7.813rem);
+
+    &__list {
+        margin-top: clamp(1.875rem, 1.364rem + 2.27vw, 3.125rem);
+
+        & li {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 540px;
+            overflow: hidden;
+
+            @include phone {
+                gap: 10px;
+            }
+        }
+    }
 }

@@ -1,54 +1,67 @@
+.swiper__navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+
+    &-button {
+        display: flex;
+        align-items: center;
+        gap: 64px;
+    }
+}
+
 .swiper-pagination {
-    position: static;
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+    bottom: auto !important;
+    translate: -50% -50%;
     width: auto !important;
     display: flex;
     align-items: center;
-    gap: 8px;
+    background: #D9D9D9;
+    border-radius: var(--border-radius);
+
+    &-bullet {
+        width: 4px;
+        height: 4px;
+        margin: 0 !important;
+        background: transparent;
+
+        &-active {
+            width: 24px;
+            background: #7D7D7D;
+            border-radius: var(--border-radius);
+        }
+    }
 
     &-bullet-active {
         margin: 0;
     }
 }
 
-.swiper-pagination-bullet {
-    @include squere(8px);
-    margin: 0 !important;
-    border-radius: 5px;
 
-    &-active {
-        width: 24px;
-        background-color: var(--color-black);
-    }
-}
 
 .swiper-button-next,
 .swiper-button-prev {
     position: static;
     margin: 0;
-    width: 48px;
-    height: 48px;
+    width: 25px;
+    height: 25px;
 
     &:after {
         content: '';
         width: 100%;
         height: 100%;
-        background: url(../images/icon/nav.svg) no-repeat center;
+        background: url(../images/icon/arrow.svg) no-repeat center;
+        background-size: contain;
     }
 }
 
 .swiper-button-prev {
     &::after {
         rotate: 180deg;
-    }
-}
-
-.swiper__navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &-button {
-        display: flex;
-        align-items: center;
     }
 }

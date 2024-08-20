@@ -1,7 +1,11 @@
 .header {
     position: relative;
-    margin-top: 50px;
+    padding-top: 50px;
     z-index: 2;
+
+    &--dark {
+        background: var(--color-black);
+    }
 
     &.fixed {
         margin: 0;
@@ -26,6 +30,7 @@
     &__link {
         display: flex;
         align-self: flex-start;
+
         @include hover {
             scale: 1.1;
             color: var(--color-yellow);
