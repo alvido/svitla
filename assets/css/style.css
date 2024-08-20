@@ -354,11 +354,15 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   font-size: clamp(28px, 3.8709677419vw, 48px);
   font-family: "El Messiri", sans-serif;
   font-weight: 500;
   line-height: 1.5;
   text-transform: uppercase;
+}
+h2 span {
+  color: var(--color-yellow);
 }
 
 h3 {
@@ -1171,6 +1175,13 @@ h5 {
   }
 }
 
+.about {
+  margin-top: clamp(3.125rem, 1.207rem + 8.52vw, 7.813rem);
+}
+.about h2 {
+  font-size: clamp(24px, 3.2258064516vw, 40px);
+}
+
 .beautiful {
   margin-top: clamp(1.875rem, 0.085rem + 7.95vw, 6.25rem);
   background: url(../images/hello-bg.svg) no-repeat center;
@@ -1205,6 +1216,9 @@ h5 {
   max-width: 620px;
   width: 100%;
 }
+.beautiful__content h2 {
+  text-align: start;
+}
 .beautiful__img {
   max-width: 490px;
 }
@@ -1218,9 +1232,6 @@ h5 {
 
 .needed {
   margin-block: clamp(3.75rem, 2.088rem + 7.39vw, 7.813rem);
-}
-.needed h2 {
-  text-align: center;
 }
 .needed__col {
   margin-top: clamp(1.875rem, -4.051rem + 9.26vw, 3.125rem);
@@ -1391,8 +1402,60 @@ h5 {
   text-align: center;
 }
 .banner__inner h2 {
-  text-align: center;
   color: var(--color-yellow);
+}
+
+.work {
+  margin-top: clamp(3.125rem, 1.207rem + 8.52vw, 7.813rem);
+}
+.work__list li {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 58px;
+  color: var(--color-black);
+  margin-top: clamp(1.875rem, 1.364rem + 2.27vw, 3.125rem);
+  background: var(--color-yellow);
+  border-radius: var(--border-radius);
+}
+@media (max-width: 560px) {
+  .work__list li {
+    padding-block: 5px;
+  }
+}
+
+.purpose {
+  margin-top: clamp(3.125rem, 1.207rem + 8.52vw, 7.813rem);
+}
+.purpose__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 36px;
+  padding: 40px;
+  border: 1px solid var(--color-yellow);
+  border-radius: 20px;
+}
+.purpose__list li {
+  padding: 20px 25px;
+  border: 1px solid var(--color-yellow);
+  border-radius: var(--border-radius);
+}
+
+.reviews {
+  margin-top: clamp(3.125rem, 1.207rem + 8.52vw, 7.813rem);
 }
 
 .footer .copy {

@@ -1,2 +1,7 @@
 .about {
+    margin-top: clamp(3.125rem, 1.207rem + 8.52vw, 7.813rem);
+
+    & h2 {
+        @include fluid-text(40, 24);
+    }
 }

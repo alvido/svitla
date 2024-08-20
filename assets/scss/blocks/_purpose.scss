@@ -1,0 +1,18 @@
+.purpose {
+    margin-top: clamp(3.125rem, 1.207rem + 8.52vw, 7.813rem);
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        padding: 40px;
+        border: 1px solid var(--color-yellow);
+        border-radius: 20px;
+
+        & li {
+            padding: 20px 25px;
+            border: 1px solid var(--color-yellow);
+            border-radius: var(--border-radius);
+        }
+    }
+}

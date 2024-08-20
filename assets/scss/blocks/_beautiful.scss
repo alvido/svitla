@@ -19,6 +19,10 @@
     &__content {
         max-width: 620px;
         width: 100%;
+
+        & h2 {
+            text-align: start;
+        }
     }
 
     &__img {

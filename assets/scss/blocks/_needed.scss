@@ -1,10 +1,6 @@
 .needed {
     margin-block: clamp(3.75rem, 2.088rem + 7.39vw, 7.813rem);
 
-    & h2 {
-        text-align: center;
-    }
-
     &__col {
         margin-top: clamp(1.875rem, -4.051rem + 9.26vw, 3.125rem);
         display: grid;

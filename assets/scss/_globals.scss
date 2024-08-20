@@ -50,11 +50,16 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     @include fluid-text(48, 28);
     font-family: "El Messiri", sans-serif;
     font-weight: 500;
     line-height: 1.5;
     text-transform: uppercase;
+
+    & span {
+        color: var(--color-yellow)
+    }
 }
 
 h3 {
